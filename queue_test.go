@@ -42,6 +42,10 @@ func TestQueue_Pop(t *testing.T){
 func TestQueue_Push(t *testing.T) {
 	Init()
 	q.Push(5)
+
+	q.Push(8)
+	q.Push(8)
+	q.Push(10)
 	q.Print()
 }
 func TestQueue_Print(t *testing.T) {
@@ -74,5 +78,14 @@ func TestQueue_SafePush(t *testing.T) {
 	q.Print()
 	fmt.Println(q.Pop())
 	fmt.Println(q.SafePop())
+	q.Print()
+}
+func TestQueue_InversePop(t *testing.T) {
+	Init()
+	q.Push(3)
+	q.Push(4)
+	q.Push(5)
+	//q.Push(nil)
+	t.Log(q.InversePop())
 	q.Print()
 }

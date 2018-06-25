@@ -7,11 +7,13 @@ type QueueI interface{
 	//the first not nil element
 	ValidHead() (interface{},int)
 	//the last not nil element
-	ValidTail() interface{}
+	ValidTail() (interface{},int)
 	//push or add an element to a queue's tail
 	Push(data interface{})
 	//pop an element from head
 	Pop()interface{}
+	//pop an element from tail
+	InversePop()interface{}
 	//print the elements in queue
 	Print()
 	//push an element in queue's tail thread/routine safe

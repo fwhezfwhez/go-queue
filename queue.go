@@ -75,6 +75,12 @@ func (q *Queue) Pop()interface{}{
 	return rs
 }
 
+func (q *Queue) InversePop()interface{}{
+	rs,index :=q.ValidTail()
+	q.Data = q.Data[:index]
+	return rs
+}
+
 //print this queue
 func (q *Queue) Print(){
 	fmt.Println("<-out",q.Data,"<-in")
