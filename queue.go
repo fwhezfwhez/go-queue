@@ -20,16 +20,25 @@ func New(size int) *Queue{
 
 //a queue's real head
 func (q *Queue) Head()(interface{},int){
+	if len(q.Data)==0{
+		return nil,-1
+	}
 	return q.Data[0],0
 }
 
 //a queue's real tail
 func (q *Queue) Tail()(interface{},int){
+	if len(q.Data)==0{
+		return nil,-1
+	}
 	return q.Data[len(q.Data)-1],len(q.Data)-1
 }
 
 //the first not nil value
 func (q *Queue) ValidHead() (interface{},int){
+	if len(q.Data)==0{
+		return nil,-1
+	}
 	for i:=0;i<len(q.Data);i++{
 		if q.Data[i]!=nil {
 			return q.Data[i],i
@@ -39,17 +48,20 @@ func (q *Queue) ValidHead() (interface{},int){
 }
 
 //the last not nil value
-func (q *Queue) ValidTail() interface{}{
+func (q *Queue) ValidTail() (interface{},int){
+	if len(q.Data)==0{
+		return nil,-1
+	}
 	for i:=len(q.Data)-1;i>=0;i--{
 		if q.Data[i]!=nil {
-			return q.Data[i]
+			return q.Data[i],i
 		}
 	}
-	return nil
+	return nil,-1
 }
 //push a value in queue
 func (q *Queue) Push(data interface{}){
-	if q.ValidTail()!=nil{
+	if rs,_:=q.ValidTail();rs!=nil||len(q.Data)==0{
 		q.Data = append(q.Data,data)
 	}else{
 		q.Data[len(q.Data)-1] = data
@@ -65,8 +77,7 @@ func (q *Queue) Pop()interface{}{
 
 //print this queue
 func (q *Queue) Print(){
-	fmt.Println("out",q.Data,"in")
-
+	fmt.Println("<-out",q.Data,"<-in")
 }
 
 //push a data  routine safe

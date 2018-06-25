@@ -11,9 +11,27 @@ go get github/fwhezfwhez/go-queue
 ```go
 package  main
 import (
-	queue "github/fwhezfwhez/go-queue"
+	queue "github.com/fwhezfwhez/go-queue"
+	"fmt"
 )
 func main() {
-	q:= queue.New()
+	//初始化
+	q:= queue.NewEmpty()
+	//压入
+	q.Push(5)
+	q.Push(4)
+	//打印
+	q.Print()
+	//出列
+	fmt.Println(q.Pop())
+	//打印
+	q.Print()
+	//长度
+	fmt.Println(q.Length())
+	//并发安全压入
+	q.SafePush(6)
+	//并发安全出列
+	fmt.Print(q.SafePop())
+	q.Print()
 }
 ```

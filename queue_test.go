@@ -1,10 +1,13 @@
 package Queue
 
-import "testing"
+import (
+	"testing"
+	"fmt"
+)
 
 var q *Queue
 func Init(){
-	q=New(2)
+	q=NewEmpty()
 	//q.Data[0]=1
 	//q.Data[1]=2
 	//q.Push(3)
@@ -41,7 +44,7 @@ func TestQueue_Print(t *testing.T) {
 	q.Push(2)
 	q.Push(3)
 	q.Print()
-	q.Pop()
+	t.Log(q.Pop())
 	q.Print()
 	q.Pop()
 	q.Print()
@@ -57,4 +60,14 @@ func TestQueue_Length(t *testing.T) {
 	q.Print()
 	t.Log(q.Length())
 	t.Log(q.ValidLength())
+}
+func TestQueue_SafePush(t *testing.T) {
+	Init()
+	q.Push(3)
+	q.SafePush(4)
+	q.SafePush(5)
+	q.Print()
+	fmt.Println(q.Pop())
+	fmt.Println(q.SafePop())
+	q.Print()
 }
