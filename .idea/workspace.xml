@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d91dcea-3628-4ca5-b4ad-4364b98715d4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/queue.go" afterPath="$PROJECT_DIR$/queue.go" />
-      <change beforePath="$PROJECT_DIR$/queue_test.go" afterPath="$PROJECT_DIR$/queue_test.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +61,11 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="352">
-                <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <first_editor relative-caret-position="326">
+                <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
                 <folding>
-                  <marker date="1529902310934" expanded="true" signature="158:208" ph="..." />
-                  <marker date="1529902310934" expanded="true" signature="221:444" ph="{...}" />
+                  <marker date="1529902387462" expanded="true" signature="158:208" ph="..." />
+                  <marker date="1529902387462" expanded="true" signature="221:513" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -370,11 +366,11 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="352">
-            <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <first_editor relative-caret-position="326">
+            <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
             <folding>
-              <marker date="1529902310934" expanded="true" signature="158:208" ph="..." />
-              <marker date="1529902310934" expanded="true" signature="221:444" ph="{...}" />
+              <marker date="1529902387462" expanded="true" signature="158:208" ph="..." />
+              <marker date="1529902387462" expanded="true" signature="221:513" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
