@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d91dcea-3628-4ca5-b4ad-4364b98715d4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/queue_test.go" afterPath="$PROJECT_DIR$/queue_test.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +16,8 @@
       <file leaf-file-name="queue.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/queue.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+            <state relative-caret-position="370">
+              <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
               <folding>
                 <element signature="e#15#40#0" expanded="true" />
               </folding>
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="queue_test.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="queue_test.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queue_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="455">
+              <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
               <folding>
                 <element signature="e#15#43#0" expanded="true" />
               </folding>
@@ -57,12 +57,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="326">
-                <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+              <first_editor relative-caret-position="378">
+                <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
                 <folding>
                   <marker date="1529902387462" expanded="true" signature="158:208" ph="..." />
                   <marker date="1529902387462" expanded="true" signature="221:513" ph="{...}" />
@@ -91,9 +91,9 @@
       <list>
         <option value="$PROJECT_DIR$/doc.go" />
         <option value="$PROJECT_DIR$/interface.go" />
-        <option value="$PROJECT_DIR$/queue_test.go" />
         <option value="$PROJECT_DIR$/queue.go" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/queue_test.go" />
       </list>
     </option>
   </component>
@@ -104,10 +104,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="697" />
-    <option name="y" value="47" />
-    <option name="width" value="1022" />
-    <option name="height" value="726" />
+    <option name="x" value="189" />
+    <option name="y" value="38" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -142,7 +142,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_X" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
   </component>
   <component name="RunDashboard">
@@ -157,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestQueue_SafePush in queue_test.go">
+  <component name="RunManager" selected="Go Test.TestQueue_Push in queue_test.go">
     <configuration name="TestQueue_Length in queue_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="Queue" />
       <working_directory value="$PROJECT_DIR$" />
@@ -185,6 +185,15 @@
       <package value="Queue" />
       <pattern value="^TestQueue_Print$" />
     </configuration>
+    <configuration name="TestQueue_Push in queue_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="Queue" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="Queue" />
+      <pattern value="^TestQueue_Push$" />
+    </configuration>
     <configuration name="TestQueue_SafePush in queue_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="Queue" />
       <working_directory value="$PROJECT_DIR$" />
@@ -194,29 +203,20 @@
       <package value="Queue" />
       <pattern value="^TestQueue_SafePush$" />
     </configuration>
-    <configuration name="TestQueue_ValidHead in queue_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
-      <module name="Queue" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="Queue" />
-      <pattern value="^TestQueue_ValidHead$" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Test.TestQueue_ValidHead in queue_test.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Test.TestQueue_Pop in queue_test.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Test.TestQueue_Print in queue_test.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Test.TestQueue_Length in queue_test.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Test.TestQueue_SafePush in queue_test.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Test.TestQueue_Pop in queue_test.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Test.TestQueue_Print in queue_test.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Test.TestQueue_Length in queue_test.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Test.TestQueue_SafePush in queue_test.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Test.TestQueue_Push in queue_test.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Test.TestQueue_SafePush in queue_test.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Test.TestQueue_Length in queue_test.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Test.TestQueue_Print in queue_test.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Test.TestQueue_Pop in queue_test.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Test.TestQueue_ValidHead in queue_test.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Test.TestQueue_Push in queue_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Test.TestQueue_SafePush in queue_test.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Test.TestQueue_Length in queue_test.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Test.TestQueue_Print in queue_test.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Test.TestQueue_Pop in queue_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -224,9 +224,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestQueue_Head_in_queue_test_go - 2018.06.25 at 12h 45m 39s.xml">
-      <configuration name="TestQueue_Head in queue_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestQueue_Length_in_queue_test_go - 2018.06.25 at 12h 47m 24s.xml">
       <configuration name="TestQueue_Length in queue_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -241,6 +238,9 @@
     </history-entry>
     <history-entry file="TestQueue_Print_in_queue_test_go - 2018.06.25 at 12h 47m 20s.xml">
       <configuration name="TestQueue_Print in queue_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestQueue_Push_in_queue_test_go - 2018.06.25 at 15h 05m 43s.xml">
+      <configuration name="TestQueue_Push in queue_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
     <history-entry file="TestQueue_SafePush_in_queue_test_go - 2018.06.25 at 12h 50m 54s.xml">
       <configuration name="TestQueue_SafePush in queue_test.go" configurationId="GoTestRunConfiguration" />
@@ -343,10 +343,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+            <folding>
+              <marker date="1529902387462" expanded="true" signature="158:208" ph="..." />
+              <marker date="1529902387462" expanded="true" signature="221:513" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/queue.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        <state relative-caret-position="370">
+          <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
           <folding>
             <element signature="e#15#40#0" expanded="true" />
           </folding>
@@ -355,25 +369,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queue_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state relative-caret-position="455">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding>
             <element signature="e#15#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="326">
-            <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-            <folding>
-              <marker date="1529902387462" expanded="true" signature="158:208" ph="..." />
-              <marker date="1529902387462" expanded="true" signature="221:513" ph="{...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

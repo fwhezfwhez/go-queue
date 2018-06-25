@@ -39,6 +39,11 @@ func TestQueue_Pop(t *testing.T){
 	t.Log(q.Data)
 }
 
+func TestQueue_Push(t *testing.T) {
+	Init()
+	q.Push(5)
+	q.Print()
+}
 func TestQueue_Print(t *testing.T) {
 	Init()
 	q.Push(2)
