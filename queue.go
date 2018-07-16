@@ -7,6 +7,7 @@ import (
 
 type Queue struct{
 	Data []interface{}
+	mutex sync.Mutex
 }
 const (
 	DEFAULT_SIZE = 10
@@ -88,17 +89,15 @@ func (q *Queue) Print(){
 
 //push a data  routine safe
 func (q *Queue) SafePush(data interface{}){
-	m := sync.Mutex{}
-	m.Lock()
-	defer m.Unlock()
+	q.mutex.Lock()
+	defer  q.mutex.Unlock()
 	q.Push(data)
 }
 
 //Pop a data routine safe
 func (q *Queue) SafePop() interface{}{
-	m := sync.Mutex{}
-	m.Lock()
-	defer m.Unlock()
+	q.mutex.Lock()
+	defer  q.mutex.Unlock()
 	return q.Pop()
 }
 
