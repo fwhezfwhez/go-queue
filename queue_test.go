@@ -7,7 +7,7 @@ import (
 
 var q *Queue
 func Init(){
-	q=NewEmpty()
+	q=New(5)
 	//q.Data[0]=1
 	//q.Data[1]=2
 	//q.Push(3)

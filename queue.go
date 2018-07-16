@@ -67,6 +67,8 @@ func (q *Queue) Push(data interface{}){
 	}else{
 		q.Data[len(q.Data)-1] = data
 	}
+	_,i:=q.ValidHead()
+	q.Data = q.Data[i:]
 }
 
 //pop a value in queue

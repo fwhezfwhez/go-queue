@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d91dcea-3628-4ca5-b4ad-4364b98715d4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/queue.go" afterPath="$PROJECT_DIR$/queue.go" />
+      <change beforePath="$PROJECT_DIR$/queue_test.go" afterPath="$PROJECT_DIR$/queue_test.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,22 +17,10 @@
       <file leaf-file-name="queue.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queue.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-346">
-              <caret line="99" column="27" lean-forward="false" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+            <state relative-caret-position="786">
+              <caret line="95" column="11" lean-forward="true" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
               <folding>
                 <element signature="e#15#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="queue_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/queue_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-462">
-              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-              <folding>
-                <element signature="e#15#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,9 +54,9 @@
       <list>
         <option value="$PROJECT_DIR$/doc.go" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/queue_test.go" />
         <option value="$PROJECT_DIR$/interface.go" />
         <option value="$PROJECT_DIR$/queue.go" />
+        <option value="$PROJECT_DIR$/queue_test.go" />
       </list>
     </option>
   </component>
@@ -199,9 +187,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestQueue_Length_in_queue_test_go - 2018.06.25 at 12h 47m 24s.xml">
-      <configuration name="TestQueue_Length in queue_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestQueue_Pop_in_queue_test_go - 2018.06.25 at 16h 49m 49s.xml">
       <configuration name="TestQueue_Pop in queue_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -227,6 +212,9 @@
       <configuration name="TestQueue_SafePush in queue_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
     <history-entry file="TestQueue_SafePush_in_queue_test_go - 2018.07.16 at 17h 17m 44s.xml">
+      <configuration name="TestQueue_SafePush in queue_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestQueue_SafePush_in_queue_test_go - 2018.07.16 at 18h 15m 12s.xml">
       <configuration name="TestQueue_SafePush in queue_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -362,8 +350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queue_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        <state relative-caret-position="460">
+          <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
             <element signature="e#15#43#0" expanded="true" />
           </folding>
@@ -372,8 +360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queue.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346">
-          <caret line="99" column="27" lean-forward="false" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+        <state relative-caret-position="786">
+          <caret line="95" column="11" lean-forward="true" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
           <folding>
             <element signature="e#15#40#0" expanded="true" />
           </folding>
