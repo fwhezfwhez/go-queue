@@ -55,7 +55,7 @@ func main() {
 
     // time queue
     tq := queue.TimeQueueWithTimeStep(10*time.Second, 50, 1*time.Nanosecond)
-	tq.StartTimeSpying()
+    tq.StartTimeSpying()
     tq.TPush(5)
     tq.SafeTPush(6)
 
