@@ -1,5 +1,6 @@
 # queue
 [![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/fwhezfwhez/go-queue)
+
 queue realization in go
 
 ## What is different from 'container/list'
@@ -33,27 +34,27 @@ import (
 	"fmt"
 )
 func main() {
-	//初始化,init
-	q:= queue.NewEmpty()
-	//压入,push
-	q.Push(5)
-	q.Push(4)
-	//打印,print
-	q.Print()
-	//出列,pop
-	fmt.Println(q.Pop())
-	//打印,print
-	q.Print()
-	//长度,len
-	fmt.Println(q.Length())
-	//并发安全压入,currently safe push
-	q.SafePush(6)
-	//并发安全出列,currently safe pop
-	fmt.Print(q.SafePop())
-	q.Print()
+    //初始化,init
+    q:= queue.NewEmpty()
+    //压入,push
+    q.Push(5)
+    q.Push(4)
+    //打印,print
+    q.Print()
+    //出列,pop
+    fmt.Println(q.Pop())
+    //打印,print
+    q.Print()
+    //长度,len
+    fmt.Println(q.Length())
+    //并发安全压入,currently safe push
+    q.SafePush(6)
+    //并发安全出列,currently safe pop
+    fmt.Print(q.SafePop())
+    q.Print()
 
-	// time queue
-	tq := queue.TimeQueueWithTimeStep(10*time.Second, 50, 1*time.Nanosecond)
+    // time queue
+    tq := queue.TimeQueueWithTimeStep(10*time.Second, 50, 1*time.Nanosecond)
 	tq.StartTimeSpying()
     tq.TPush(5)
     tq.SafeTPush(6)
