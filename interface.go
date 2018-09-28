@@ -1,4 +1,5 @@
 package Queue
+
 type QueueI interface{
 	//the first element of the queue
 	Head()(interface{},int)
@@ -24,4 +25,20 @@ type QueueI interface{
 	Length() int
 	//queue's length after trim nil
 	ValidLength() int
+}
+
+type TimeQueueI interface{
+	QueueI
+	//Add data into a time queue
+	TPush(data interface{})
+	//Pop data from a time queue as timeWrapper
+	TPop() (*TimeWrapper, int, error)
+	//push data into time queue concurrently safe
+	SafeTPush(data interface{})
+	//pop data from time queue as timeWrapper concurrently safe
+	SafeTPop() (*TimeWrapper,int,error)
+	//run a goroutine to execute time out spying on data and another goroutine as its supervisor
+	StartTimeSpying()
+	//stop time spying routines
+	StopTimeSpying()
 }
