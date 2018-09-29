@@ -231,6 +231,12 @@ func (q *Queue) Length() int {
 	return len(q.Data)
 }
 
+func (q *Queue) SafeLength() int{
+	q.mutex.Lock()
+	defer q.mutex.Unlock()
+	return len(q.Data)
+}
+
 // trip it's nil value at head and tail and return its valid length
 func (q *Queue) ValidLength() int {
 	begin := -1

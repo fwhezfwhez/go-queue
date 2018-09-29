@@ -144,7 +144,7 @@ func TestReadME(t *testing.T) {
 	//并发安全压入,currently safe push
 	q.SafePush(6)
 	//并发安全出列,currently safe pop
-	fmt.Print(q.SafePop())
+	fmt.Println(q.SafePop())
 	q.Print()
 
 	// time queue
