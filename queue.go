@@ -13,7 +13,7 @@ const (
 
 type Queue struct {
 	Data  []interface{}
-	Mutex sync.Mutex
+	Mutex *sync.Mutex
 
 	timeSpy     bool //whether drop data out of time. timeSpy should be set only at beginning and unmodifiable
 	ExpireAfter time.Duration
