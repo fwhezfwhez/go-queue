@@ -13,7 +13,7 @@ const (
 
 type Queue struct {
 	Data  []interface{}
-	mutex sync.Mutex
+	Mutex sync.Mutex
 
 	timeSpy     bool //whether drop data out of time. timeSpy should be set only at beginning and unmodifiable
 	ExpireAfter time.Duration
@@ -74,8 +74,8 @@ func (q *Queue) Head() (interface{}, int) {
 
 //a queue's real head
 func (q *Queue) SafeHead() (interface{}, int) {
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return q.Head()
 }
 
@@ -93,8 +93,8 @@ func (q *Queue) Tail() (interface{}, int) {
 }
 
 func (q *Queue) SafeTail() (interface{}, int) {
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return q.Tail()
 }
 
@@ -118,8 +118,8 @@ func (q *Queue) ValidHead() (interface{}, int) {
 }
 
 func (q *Queue) SafeValidHead()(interface{}, int){
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return q.ValidHead()
 }
 
@@ -137,8 +137,8 @@ func (q *Queue) THead() (*TimeWrapper, int, error) {
 }
 
 func (q *Queue) SafeTHead()(interface{}, int, error){
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return q.THead()
 }
 
@@ -223,30 +223,30 @@ func (q *Queue) Print() {
 
 //push a data  routine safe
 func (q *Queue) SafePush(data interface{}) {
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	q.Push(data)
 }
 
 //push a data  into time queue routine safe
 func (q *Queue) SafeTPush(data interface{}) {
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	q.TPush(data)
 }
 
 //Pop a data routine safe
 func (q *Queue) SafePop() interface{} {
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return q.Pop()
 }
 
 
 //Pop a data from a time queue routine safe
 func (q *Queue) SafeTPop() (*TimeWrapper,int,error) {
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return q.TPop()
 }
 
@@ -256,8 +256,8 @@ func (q *Queue) Length() int {
 }
 
 func (q *Queue) SafeLength() int{
-	q.mutex.Lock()
-	defer q.mutex.Unlock()
+	q.Mutex.Lock()
+	defer q.Mutex.Unlock()
 	return len(q.Data)
 }
 
