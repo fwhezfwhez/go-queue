@@ -22,13 +22,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="7036" />
+          <entry key="go" value="7074" />
           <entry key="md" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="7036" />
+          <entry key="Go" value="7074" />
           <entry key="PLAIN_TEXT" value="126" />
         </counts>
       </usages-collector>
@@ -75,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queue.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="390">
+              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -227,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build queue.go">
+  <component name="RunManager" selected="Go Test.go test Queue">
     <configuration name="go build queue.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Queue" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -259,17 +259,6 @@
       <pattern value="^BenchmarkQueue_SafeTPush$" />
       <method v="2" />
     </configuration>
-    <configuration name="BenchmarkQueue_TPush in Queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Queue" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gobench" />
-      <kind value="PACKAGE" />
-      <package value="Queue" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^BenchmarkQueue_TPush$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestReadME in Queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Queue" />
       <working_directory value="$PROJECT_DIR$" />
@@ -281,20 +270,30 @@
       <pattern value="^TestReadME$" />
       <method v="2" />
     </configuration>
+    <configuration name="go test Queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Queue" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="Queue" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Go Test.BenchmarkQueue_TPush in Queue" />
       <item itemvalue="Go Test.BenchmarkQueue_SafeTPop in Queue" />
       <item itemvalue="Go Test.BenchmarkQueue_SafeTPush in Queue" />
       <item itemvalue="Go Test.TestReadME in Queue" />
       <item itemvalue="Go Build.go build queue.go" />
+      <item itemvalue="Go Test.go test Queue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test Queue" />
         <item itemvalue="Go Build.go build queue.go" />
         <item itemvalue="Go Test.TestReadME in Queue" />
         <item itemvalue="Go Test.BenchmarkQueue_SafeTPush in Queue" />
         <item itemvalue="Go Test.BenchmarkQueue_SafeTPop in Queue" />
-        <item itemvalue="Go Test.BenchmarkQueue_TPush in Queue" />
       </list>
     </recent_temporary>
   </component>
@@ -494,8 +493,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queue.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="390">
+          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
         </state>
       </provider>
     </entry>
