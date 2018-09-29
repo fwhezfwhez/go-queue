@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d91dcea-3628-4ca5-b4ad-4364b98715d4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/queue.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +22,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="6854" />
+          <entry key="go" value="7028" />
           <entry key="md" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="6854" />
+          <entry key="Go" value="7028" />
           <entry key="PLAIN_TEXT" value="126" />
         </counts>
       </usages-collector>
@@ -77,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queue.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="233" column="23" selection-start-line="233" selection-start-column="23" selection-end-line="233" selection-end-column="23" />
+            <state relative-caret-position="328">
+              <caret line="174" column="25" lean-forward="true" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -496,8 +494,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queue.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="233" column="23" selection-start-line="233" selection-start-column="23" selection-end-line="233" selection-end-column="23" />
+        <state relative-caret-position="328">
+          <caret line="174" column="25" lean-forward="true" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
         </state>
       </provider>
     </entry>

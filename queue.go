@@ -72,6 +72,13 @@ func (q *Queue) Head() (interface{}, int) {
 	}
 }
 
+//a queue's real head
+func (q *Queue) SafeHead() (interface{}, int) {
+	q.mutex.Lock()
+	defer q.mutex.Unlock()
+	return q.Head()
+}
+
 //a queue's real tail
 func (q *Queue) Tail() (interface{}, int) {
 	if len(q.Data) == 0 {
@@ -83,7 +90,12 @@ func (q *Queue) Tail() (interface{}, int) {
 		wrapper, index := q.Data[len(q.Data)-1], len(q.Data)-1
 		return wrapper.(TimeWrapper).Data, index
 	}
+}
 
+func (q *Queue) SafeTail() (interface{}, int) {
+	q.mutex.Lock()
+	defer q.mutex.Unlock()
+	return q.Tail()
 }
 
 //the first not nil value
@@ -105,6 +117,12 @@ func (q *Queue) ValidHead() (interface{}, int) {
 	return nil, -1
 }
 
+func (q *Queue) SafeValidHead()(interface{}, int){
+	q.mutex.Lock()
+	defer q.mutex.Unlock()
+	return q.ValidHead()
+}
+
 func (q *Queue) THead() (*TimeWrapper, int, error) {
 	if len(q.Data) == 0 {
 		return nil, -1, errorx.NewFromString("empty queue")
@@ -116,6 +134,12 @@ func (q *Queue) THead() (*TimeWrapper, int, error) {
 	} else {
 		return nil, -1, errorx.NewFromString("THead only use in a time queue,got by TimeQueue(time.Duration,int)")
 	}
+}
+
+func (q *Queue) SafeTHead()(interface{}, int, error){
+	q.mutex.Lock()
+	defer q.mutex.Unlock()
+	return q.THead()
 }
 
 //the last not nil value
