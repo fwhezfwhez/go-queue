@@ -1,8 +1,8 @@
 package Queue
 
 import (
-	"errorX"
 	"fmt"
+	"github.com/fwhezfwhez/errorx"
 	"sync"
 	"time"
 )
@@ -17,9 +17,9 @@ type Queue struct {
 
 	timeSpy     bool //whether drop data out of time. timeSpy should be set only at beginning and unmodifiable
 	ExpireAfter time.Duration
-	flag        chan int //use this to stop time spy for a time queue
-	cap         int  //queue extends minimum step
-	timeStep    time.Duration  //how frequency is the spy routine runs by default 10s
+	flag        chan int      //use this to stop time spy for a time queue
+	cap         int           //queue extends minimum step
+	timeStep    time.Duration //how frequency is the spy routine runs by default 10s
 }
 type TimeWrapper struct {
 	Data      interface{}
@@ -32,9 +32,9 @@ func TimeQueue(expireAfter time.Duration, cap int) *Queue {
 		Data:        make([]interface{}, 0, cap),
 		timeSpy:     true,
 		ExpireAfter: expireAfter,
-		cap : cap,
-		timeStep: 10*time.Second,
-		Mutex: &sync.Mutex{},
+		cap:         cap,
+		timeStep:    10 * time.Second,
+		Mutex:       &sync.Mutex{},
 	}
 }
 
@@ -44,21 +44,21 @@ func TimeQueueWithTimeStep(expireAfter time.Duration, cap int, tsp time.Duration
 		Data:        make([]interface{}, 0, cap),
 		timeSpy:     true,
 		ExpireAfter: expireAfter,
-		cap : cap,
-		timeStep: tsp,
-		Mutex: &sync.Mutex{},
+		cap:         cap,
+		timeStep:    tsp,
+		Mutex:       &sync.Mutex{},
 	}
 }
 
 func NewEmpty() *Queue {
-	return &Queue{Data: make([]interface{}, 0, DEFAULT_SIZE),Mutex: &sync.Mutex{},}
+	return &Queue{Data: make([]interface{}, 0, DEFAULT_SIZE), Mutex: &sync.Mutex{},}
 }
 func New(size int) *Queue {
-	return &Queue{Data: make([]interface{}, size, 2*size),Mutex: &sync.Mutex{},}
+	return &Queue{Data: make([]interface{}, size, 2*size), Mutex: &sync.Mutex{},}
 }
 
 func NewCap(cap int) *Queue {
-	return &Queue{Data: make([]interface{}, 0, cap),cap:cap,Mutex: &sync.Mutex{},}
+	return &Queue{Data: make([]interface{}, 0, cap), cap: cap, Mutex: &sync.Mutex{},}
 }
 
 //a queue's real head
@@ -119,7 +119,7 @@ func (q *Queue) ValidHead() (interface{}, int) {
 	return nil, -1
 }
 
-func (q *Queue) SafeValidHead()(interface{}, int){
+func (q *Queue) SafeValidHead() (interface{}, int) {
 	q.Mutex.Lock()
 	defer q.Mutex.Unlock()
 	return q.ValidHead()
@@ -138,7 +138,7 @@ func (q *Queue) THead() (*TimeWrapper, int, error) {
 	}
 }
 
-func (q *Queue) SafeTHead()(interface{}, int, error){
+func (q *Queue) SafeTHead() (interface{}, int, error) {
 	q.Mutex.Lock()
 	defer q.Mutex.Unlock()
 	return q.THead()
@@ -178,17 +178,17 @@ func (q *Queue) Push(data interface{}) {
 	q.Data = q.Data[i:]
 }
 
-func (q *Queue) TPush(data interface{}){
+func (q *Queue) TPush(data interface{}) {
 	q.Push(data)
 }
 
 //pop a value in queue
 func (q *Queue) Pop() interface{} {
 	rs, index := q.ValidHead()
-	if len(q.Data)>1 {
+	if len(q.Data) > 1 {
 		q.Data = q.Data[index+1:]
-	}else{
-		q.Data = make([]interface{},0, q.cap)
+	} else {
+		q.Data = make([]interface{}, 0, q.cap)
 	}
 
 	return rs
@@ -204,10 +204,10 @@ func (q *Queue) TPop() (*TimeWrapper, int, error) {
 		return nil, -1, errorx.Wrap(er)
 	}
 
-	if len(q.Data)>1 {
+	if len(q.Data) > 1 {
 		q.Data = q.Data[index+1:]
-	}else{
-		q.Data = make([]interface{},0, q.cap)
+	} else {
+		q.Data = make([]interface{}, 0, q.cap)
 	}
 
 	return rs, index, nil
@@ -244,9 +244,8 @@ func (q *Queue) SafePop() interface{} {
 	return q.Pop()
 }
 
-
 //Pop a data from a time queue routine safe
-func (q *Queue) SafeTPop() (*TimeWrapper,int,error) {
+func (q *Queue) SafeTPop() (*TimeWrapper, int, error) {
 	q.Mutex.Lock()
 	defer q.Mutex.Unlock()
 	return q.TPop()
@@ -257,7 +256,7 @@ func (q *Queue) Length() int {
 	return len(q.Data)
 }
 
-func (q *Queue) SafeLength() int{
+func (q *Queue) SafeLength() int {
 	q.Mutex.Lock()
 	defer q.Mutex.Unlock()
 	return len(q.Data)
@@ -308,8 +307,8 @@ func (q *Queue) startTimeSpying() error {
 			default:
 				fmt.Print()
 			}
-			ok,er:=queue.timingRemove()
-			if er!=nil{
+			ok, er := queue.timingRemove()
+			if er != nil {
 				err <- er.(errorx.Error).StackTrace()
 			}
 			if ok {
@@ -319,7 +318,7 @@ func (q *Queue) startTimeSpying() error {
 	}(q, err)
 	select {
 	case msg := <-err:
-		fmt.Println("time spy supervisor accidentally stops because: ",msg)
+		fmt.Println("time spy supervisor accidentally stops because: ", msg)
 		return errorx.NewFromString(msg)
 	case <-q.flag:
 		fmt.Println("time spy supervisor stops")
@@ -333,9 +332,9 @@ func (q *Queue) StopTimeSpying() {
 }
 
 // remove those time-out data
-func (q *Queue) timingRemove() (bool,error) {
-	if len(q.Data) <1 {
-		return true,nil
+func (q *Queue) timingRemove() (bool, error) {
+	if len(q.Data) < 1 {
+		return true, nil
 	}
 	head, index, er := q.THead()
 	if er != nil {
@@ -350,16 +349,16 @@ func (q *Queue) timingRemove() (bool,error) {
 	//fmt.Println("expire:",created.Add(q.ExpireAfter).Unix())
 	if created.Add(q.ExpireAfter).Unix() < now {
 		// out of time
-		_,_,e := q.TPop()
-		if e!=nil {
+		_, _, e := q.TPop()
+		if e != nil {
 			return false, errorx.Wrap(e)
 		}
-		if len(q.Data) >0 {
+		if len(q.Data) > 0 {
 			return q.timingRemove()
-		}else{
-			return true,nil
+		} else {
+			return true, nil
 		}
-	} else{
-		return true ,nil
+	} else {
+		return true, nil
 	}
 }

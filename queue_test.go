@@ -129,7 +129,7 @@ func TestTimeQueue(t *testing.T) {
 
 func TestReadME(t *testing.T) {
 	//初始化,init
-	q := NewEmpty()
+	q:= NewEmpty()
 	//压入,push
 	q.Push(5)
 	q.Push(4)
@@ -144,7 +144,7 @@ func TestReadME(t *testing.T) {
 	//并发安全压入,currently safe push
 	q.SafePush(6)
 	//并发安全出列,currently safe pop
-	fmt.Println(q.SafePop())
+	fmt.Print(q.SafePop())
 	q.Print()
 
 	// time queue
@@ -152,9 +152,7 @@ func TestReadME(t *testing.T) {
 	tq.StartTimeSpying()
 	tq.TPush(5)
 	tq.SafeTPush(6)
-	tq.TPush(7)
-	v,i,e:=tq.TPop()
-	fmt.Println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",v.Data,i,e)
+
 	fmt.Println("init:")
 	tq.Print()
 
