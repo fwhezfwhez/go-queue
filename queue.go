@@ -34,6 +34,7 @@ func TimeQueue(expireAfter time.Duration, cap int) *Queue {
 		ExpireAfter: expireAfter,
 		cap : cap,
 		timeStep: 10*time.Second,
+		Mutex: &sync.Mutex{},
 	}
 }
 
@@ -45,18 +46,19 @@ func TimeQueueWithTimeStep(expireAfter time.Duration, cap int, tsp time.Duration
 		ExpireAfter: expireAfter,
 		cap : cap,
 		timeStep: tsp,
+		Mutex: &sync.Mutex{},
 	}
 }
 
 func NewEmpty() *Queue {
-	return &Queue{Data: make([]interface{}, 0, DEFAULT_SIZE)}
+	return &Queue{Data: make([]interface{}, 0, DEFAULT_SIZE),Mutex: &sync.Mutex{},}
 }
 func New(size int) *Queue {
-	return &Queue{Data: make([]interface{}, size, 2*size)}
+	return &Queue{Data: make([]interface{}, size, 2*size),Mutex: &sync.Mutex{},}
 }
 
 func NewCap(cap int) *Queue {
-	return &Queue{Data: make([]interface{}, 0, cap),cap:cap}
+	return &Queue{Data: make([]interface{}, 0, cap),cap:cap,Mutex: &sync.Mutex{},}
 }
 
 //a queue's real head

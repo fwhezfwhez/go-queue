@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d91dcea-3628-4ca5-b4ad-4364b98715d4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/queue.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queue_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,33 +16,33 @@
     <session id="-1753160988">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="7036" />
+          <entry key="go" value="7133" />
           <entry key="md" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="7036" />
+          <entry key="Go" value="7133" />
           <entry key="PLAIN_TEXT" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="5" />
+          <entry key="go" value="6" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="5" />
+          <entry key="Go" value="6" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -51,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../github.com/xormplus/xorm/session_find.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1508">
+            <state relative-caret-position="1300">
               <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
               <folding>
                 <element signature="e#176#284#0" expanded="true" />
@@ -63,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../github.com/xormplus/xorm/session_stats.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="390">
               <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding>
                 <element signature="e#176#223#0" expanded="true" />
@@ -72,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/queue.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="182">
+              <caret line="60" column="82" lean-forward="true" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -84,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://E:/go_1.11/src/runtime/panic.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="451">
+              <caret line="680" selection-start-line="680" selection-end-line="680" />
             </state>
           </provider>
         </entry>
@@ -99,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queue_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="310">
+              <caret line="156" column="57" selection-start-line="156" selection-start-column="57" selection-end-line="156" selection-end-column="57" />
               <folding>
                 <element signature="e#15#51#0" expanded="true" />
                 <element signature="n#!!block;n#TestQueue_Tail#0" />
@@ -115,8 +117,16 @@
                 <element signature="n#!!block;n#TestQueue_SafePush#0" />
                 <element signature="n#!!block;n#TestQueue_InversePop#0" />
                 <element signature="n#!!block;n#TestTimeRemoveQueue#0" />
-                <element signature="n#!!block;n#TestTimeQueue#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/go_1.11/src/testing/testing.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="764" selection-start-line="764" selection-end-line="764" />
             </state>
           </provider>
         </entry>
@@ -142,7 +152,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
+            <state relative-caret-position="884">
               <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
             </state>
           </provider>
@@ -173,8 +183,8 @@
         <option value="$PROJECT_DIR$/doc.go" />
         <option value="$PROJECT_DIR$/interface.go" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/queue_test.go" />
         <option value="$PROJECT_DIR$/queue.go" />
+        <option value="$PROJECT_DIR$/queue_test.go" />
       </list>
     </option>
   </component>
@@ -212,7 +222,7 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_X" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RunDashboard">
@@ -227,7 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build queue.go">
+  <component name="RunManager" selected="Go Test.TestReadME in Queue">
     <configuration name="go build queue.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Queue" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -259,17 +269,6 @@
       <pattern value="^BenchmarkQueue_SafeTPush$" />
       <method v="2" />
     </configuration>
-    <configuration name="BenchmarkQueue_TPush in Queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Queue" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gobench" />
-      <kind value="PACKAGE" />
-      <package value="Queue" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^BenchmarkQueue_TPush$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestReadME in Queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Queue" />
       <working_directory value="$PROJECT_DIR$" />
@@ -281,45 +280,35 @@
       <pattern value="^TestReadME$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestTimeQueue in Queue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Queue" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="Queue" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestTimeQueue$" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Go Test.BenchmarkQueue_TPush in Queue" />
       <item itemvalue="Go Test.BenchmarkQueue_SafeTPop in Queue" />
       <item itemvalue="Go Test.BenchmarkQueue_SafeTPush in Queue" />
       <item itemvalue="Go Test.TestReadME in Queue" />
       <item itemvalue="Go Build.go build queue.go" />
+      <item itemvalue="Go Test.TestTimeQueue in Queue" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build queue.go" />
         <item itemvalue="Go Test.TestReadME in Queue" />
+        <item itemvalue="Go Test.TestTimeQueue in Queue" />
+        <item itemvalue="Go Build.go build queue.go" />
         <item itemvalue="Go Test.BenchmarkQueue_SafeTPush in Queue" />
         <item itemvalue="Go Test.BenchmarkQueue_SafeTPop in Queue" />
-        <item itemvalue="Go Test.BenchmarkQueue_TPush in Queue" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="BenchmarkQueue_TPush_in_Queue - 2018.09.28 at 14h 50m 18s.xml">
-      <configuration name="BenchmarkQueue_TPush in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BenchmarkQueue_SafeTPop_in_Queue - 2018.09.28 at 14h 51m 29s.xml">
-      <configuration name="BenchmarkQueue_SafeTPop in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BenchmarkQueue_SafeTPop_in_Queue - 2018.09.28 at 14h 51m 40s.xml">
-      <configuration name="BenchmarkQueue_SafeTPop in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BenchmarkQueue_SafeTPop_in_Queue - 2018.09.28 at 14h 51m 48s.xml">
-      <configuration name="BenchmarkQueue_SafeTPop in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BenchmarkQueue_SafeTPush_in_Queue - 2018.09.28 at 14h 52m 12s.xml">
-      <configuration name="BenchmarkQueue_SafeTPush in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BenchmarkQueue_SafeTPush_in_Queue - 2018.09.28 at 14h 52m 18s.xml">
-      <configuration name="BenchmarkQueue_SafeTPush in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BenchmarkQueue_SafeTPush_in_Queue - 2018.09.28 at 14h 52m 25s.xml">
-      <configuration name="BenchmarkQueue_SafeTPush in Queue" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestReadME_in_Queue - 2018.09.28 at 15h 17m 22s.xml">
       <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -329,17 +318,38 @@
     <history-entry file="TestReadME_in_Queue - 2018.09.28 at 15h 20m 07s.xml">
       <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestReadME_in_Queue - 2018.10.18 at 10h 26m 13s.xml">
+      <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadME_in_Queue - 2018.10.18 at 10h 26m 48s.xml">
+      <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadME_in_Queue - 2018.10.18 at 10h 26m 57s.xml">
+      <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTimeQueue_in_Queue - 2018.10.18 at 10h 29m 36s.xml">
+      <configuration name="TestTimeQueue in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTimeQueue_in_Queue - 2018.10.18 at 10h 29m 42s.xml">
+      <configuration name="TestTimeQueue in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadME_in_Queue - 2018.10.18 at 10h 30m 00s.xml">
+      <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadME_in_Queue - 2018.10.18 at 10h 30m 25s.xml">
+      <configuration name="TestReadME in Queue" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28624734" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15191898" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27361563" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27361563" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -367,6 +377,18 @@
           <url>file://$PROJECT_DIR$/queue_test.go</url>
           <line>10</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/queue_test.go</url>
+          <line>155</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/queue_test.go</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -419,7 +441,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/xormplus/xorm/session_find.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
+        <state relative-caret-position="1300">
           <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
           <folding>
             <element signature="e#176#284#0" expanded="true" />
@@ -429,18 +451,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/xormplus/xorm/session_stats.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="390">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding>
             <element signature="e#176#223#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/go_1.11/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -467,15 +482,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interface.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
+        <state relative-caret-position="884">
           <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/go_1.11/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="680" selection-start-line="680" selection-end-line="680" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/go_1.11/src/testing/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="764" selection-start-line="764" selection-end-line="764" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queue.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="60" column="82" lean-forward="true" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/queue_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="310">
+          <caret line="156" column="57" selection-start-line="156" selection-start-column="57" selection-end-line="156" selection-end-column="57" />
           <folding>
             <element signature="e#15#51#0" expanded="true" />
             <element signature="n#!!block;n#TestQueue_Tail#0" />
@@ -487,15 +523,7 @@
             <element signature="n#!!block;n#TestQueue_SafePush#0" />
             <element signature="n#!!block;n#TestQueue_InversePop#0" />
             <element signature="n#!!block;n#TestTimeRemoveQueue#0" />
-            <element signature="n#!!block;n#TestTimeQueue#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/queue.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
         </state>
       </provider>
     </entry>

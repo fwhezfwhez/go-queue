@@ -152,7 +152,9 @@ func TestReadME(t *testing.T) {
 	tq.StartTimeSpying()
 	tq.TPush(5)
 	tq.SafeTPush(6)
-
+	tq.TPush(7)
+	v,i,e:=tq.TPop()
+	fmt.Println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",v.Data,i,e)
 	fmt.Println("init:")
 	tq.Print()
 
