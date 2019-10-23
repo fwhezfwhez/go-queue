@@ -1,8 +1,8 @@
 package Queue
 
 import (
+	"errorX"
 	"fmt"
-	"github.com/fwhezfwhez/errorx"
 	"sync"
 	"time"
 )
@@ -127,14 +127,14 @@ func (q *Queue) SafeValidHead() (interface{}, int) {
 
 func (q *Queue) THead() (*TimeWrapper, int, error) {
 	if len(q.Data) == 0 {
-		return nil, -1, errorx.NewFromString("empty queue")
+		return nil, -1, fmt.Errorf("empty queue")
 	}
 
 	if q.timeSpy {
 		tw := q.Data[0].(TimeWrapper)
 		return &tw, 0, nil
 	} else {
-		return nil, -1, errorx.NewFromString("THead only use in a time queue,got by TimeQueue(time.Duration,int)")
+		return nil, -1, fmt.Errorf("THead only use in a time queue,got by TimeQueue(time.Duration,int)")
 	}
 }
 
