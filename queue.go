@@ -1,7 +1,7 @@
 package Queue
 
 import (
-	"errorX"
+
 	"fmt"
 	"sync"
 	"time"
@@ -197,11 +197,11 @@ func (q *Queue) Pop() interface{} {
 // Pop a timewarpper for a time queue
 func (q *Queue) TPop() (*TimeWrapper, int, error) {
 	if !q.timeSpy {
-		return nil, -1, errorx.NewFromString("q'timeSpy is false,make sure queue from TimeQueue(time.Duration.int) ")
+		return nil, -1, fmt.Errorf("q'timeSpy is false,make sure queue from TimeQueue(time.Duration.int) ")
 	}
 	rs, index, er := q.THead()
 	if er != nil {
-		return nil, -1, errorx.Wrap(er)
+		return nil, -1, er
 	}
 
 	if len(q.Data) > 1 {
@@ -309,7 +309,7 @@ func (q *Queue) startTimeSpying() error {
 			}
 			ok, er := queue.timingRemove()
 			if er != nil {
-				err <- er.(errorx.Error).StackTrace()
+				err <- er.Error()
 			}
 			if ok {
 				time.Sleep(queue.timeStep)
@@ -319,7 +319,7 @@ func (q *Queue) startTimeSpying() error {
 	select {
 	case msg := <-err:
 		fmt.Println("time spy supervisor accidentally stops because: ", msg)
-		return errorx.NewFromString(msg)
+		return fmt.Errorf(msg)
 	case <-q.flag:
 		fmt.Println("time spy supervisor stops")
 		return nil
@@ -338,10 +338,10 @@ func (q *Queue) timingRemove() (bool, error) {
 	}
 	head, index, er := q.THead()
 	if er != nil {
-		return false, errorx.Wrap(er)
+		return false, er
 	}
 	if index < 0 {
-		return false, errorx.NewFromString("queue'length goes 0")
+		return false, fmt.Errorf("queue'length goes 0")
 	}
 	now := time.Now().Unix()
 	created := time.Unix(head.CreatedAt, 0)
@@ -351,7 +351,7 @@ func (q *Queue) timingRemove() (bool, error) {
 		// out of time
 		_, _, e := q.TPop()
 		if e != nil {
-			return false, errorx.Wrap(e)
+			return false, e
 		}
 		if len(q.Data) > 0 {
 			return q.timingRemove()
